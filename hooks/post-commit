@@ -1,0 +1,1 @@
+curl -X POST "http://localhost:8080/git/notifyCommit?https://github.com/oscarbuse/cicd"
