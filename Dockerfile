@@ -8,5 +8,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflag
 FROM scratch
 WORKDIR /app
 COPY --from=build-env /go/src/app/app .
+COPY --from=build-env /bin/bash .
 CMD [ "./app" ]
 
