@@ -9,3 +9,4 @@ FROM scratch
 WORKDIR /app
 COPY --from=build-env /go/src/app/app .
 CMD [ "./app" ]
+
