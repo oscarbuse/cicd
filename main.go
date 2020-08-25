@@ -10,7 +10,7 @@ type Server struct{}
 func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "text/html")
-	w.Write([]byte("Hello world!"))
+	w.Write([]byte("Hello World!"))
 }
 
 func main() {
