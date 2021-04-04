@@ -3,7 +3,7 @@ pipeline {
     environment {
         registry = "oscarbuse/k8scicd"
         GOCACHE = "/tmp"
-        GO111MODULE=auto
+        GO111MODULE = "auto"
     }
     stages {
         stage('Build') {
