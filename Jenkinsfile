@@ -3,6 +3,7 @@ pipeline {
     environment {
         registry = "oscarbuse/k8scicd"
         GOCACHE = "/tmp"
+        GO111MODULE=auto
     }
     stages {
         stage('Build') {
@@ -18,7 +19,6 @@ pipeline {
                 // Copy all files in our Jenkins workspace to our project directory.                
                 sh 'cp -r ${WORKSPACE}/* ${GOPATH}/src/hello-world'
                 // Build the app.
-                sh 'cd ${GOPATH}/src/hello-world'
                 sh 'go build'               
             }     
         }
