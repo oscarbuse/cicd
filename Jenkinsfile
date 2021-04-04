@@ -43,6 +43,7 @@ pipeline {
         stage('Publish') {
             environment {
                 registryCredential = 'dockerhub_id'
+                GO111MODULE = "auto"
             }
             steps{
                 script {
